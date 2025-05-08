@@ -3,7 +3,8 @@ Use ImageDataGenerator to create data.  Explore age distribution and print examp
 
 🧠 Image Data Generator – Computer Vision Augmentation
 
-This project demonstrates how to use Keras’ ImageDataGenerator to augment image datasets for deep learning in computer vision. It visualizes real-time image transformations that help improve model generalization and reduce overfitting.
+This project demonstrates how to use Keras’ ImageDataGenerator to augment image datasets for deep learning in computer vision. Source file is [ChaLearn Looking at People - Dataset 26](https://chalearnlap.cvc.uab.es/dataset/26/description/)
+ It visualizes real-time image transformations that help improve model generalization and reduce overfitting.
 
 📚 Table of Contents
 About the Project
