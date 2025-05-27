@@ -6,7 +6,19 @@ Use ImageDataGenerator to create data.  Explore age distribution and print examp
 This project demonstrates how to use Keras’ ImageDataGenerator to augment image datasets for deep learning in computer vision. Source file is [ChaLearn Looking at People - Dataset 26](https://chalearnlap.cvc.uab.es/dataset/26/description/)
  It visualizes real-time image transformations that help improve model generalization and reduce overfitting.
 
-📌 About the Project
+### 🧰 Techniques Demonstrated
+
+| Category             | Technique                                          | Description / Example                                                                 |
+|----------------------|----------------------------------------------------|----------------------------------------------------------------------------------------|
+| **Computer Vision**   | `ImageDataGenerator` (Keras)                       | Augmented images with horizontal/vertical shifts, rotations, and rescaling for robustness. |
+| **Neural Networks**   | ResNet50 + Custom Head                             | Used pretrained ResNet50 base with a custom regression head for age prediction.         |
+| **CNN**               | Convolutional layers via ResNet                   | Leveraged deep CNNs for spatial feature extraction from facial images.                  |
+| **Keras**             | Model API, Training, Callbacks                     | Implemented model architecture, fit/compile methods, and training loop using Keras.     |
+| **TensorFlow**        | Backend engine                                     | Utilized TensorFlow GPU acceleration for training efficiency.                          |
+| **Pipeline**          | End-to-end modeling flow                           | Data cleaning → augmentation → model training → evaluation pipeline.                    |
+| **Visualization**     | EDA & Training Metrics                             | Age distribution histogram; plotted loss & MAE curves across epochs.                    |
+| **Business Insight**  | Model Bias & Generalization                        | Identified imbalance in age distribution and its impact on model performance.           |
+| **Overfitting Handling** | Dropout, GlobalAveragePooling2D, Augmentation  | Used architectural and data strategies to reduce overfitting.                           |
 
 🧠 Predicting Age from Faces: A Deep Learning Journey with ResNet50
 What if a machine could guess your age just by looking at your photo? That’s the question I set out to explore in this project using deep learning and computer vision.
@@ -35,6 +47,7 @@ A Dense output layer tailored for regression.
 The model was optimized using Adam, and trained on a GPU to take full advantage of parallelism.
 
 📈 Progress… and Pitfalls
+
 Over 20 epochs, the model’s training loss dropped dramatically:
 
 From 95.35 to 17.02
@@ -47,9 +60,11 @@ But the validation results told a more complicated story.
 Initially, the validation loss decreased—but then it spiked at epoch 12 (185.63) and settled at 93.41 by the final epoch. It was a classic case of overfitting.
 
 🧠 What I Learned
+
 Training a model to estimate age from faces is as much about avoiding overconfidence as it is about accuracy. The training results were promising, but the validation behavior showed me that real-world generalization requires more than just data and compute—it demands restraint.
 
 🔁 What’s Next
+
 To improve generalization and performance:
 
 Apply regularization techniques (dropout, L2)
